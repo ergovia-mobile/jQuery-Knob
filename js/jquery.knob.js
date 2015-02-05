@@ -120,6 +120,7 @@
                     inline: false,
                     step: this.$.data('step') || 1,
                     rotation: this.$.data('rotation'),
+                    fontSize: this.$.data('fontSize'),
 
                     // Hooks
                     draw: null, // function () {}
@@ -714,7 +715,7 @@
                         'margin-left' : '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px',
                         'border' : 0,
                         'background' : 'none',
-                        'font' : this.o.fontWeight + ' ' + ((this.w / s) >> 0) + 'px ' + this.o.font,
+                        'font' : this.o.fontWeight + ' ' + (this.o.fontSize ? this.o.fontSize : ((this.w / s) >> 0)) + 'px ' + this.o.font,
                         'text-align' : 'center',
                         'color' : this.o.inputColor || this.o.fgColor,
                         'padding' : '0px',
