@@ -277,16 +277,17 @@
                 this.h = this.o.height;
             }
 
+            //both a little bit bigger to to get rid of cut of edges on ipad2 and ipad mini (non retina)
             // finalize div
             this.$div.css({
-                'width': this.w + 'px',
-                'height': this.h + 'px'
+                'width': Number(this.w)+2 + 'px',
+                'height': Number(this.h)+2 + 'px'
             });
 
             // finalize canvas with computed width
             this.$c.attr({
-                width: this.w,
-                height: this.h
+                width: Number(this.w)+1,
+                height: Number(this.h)+1
             });
 
             // scaling
